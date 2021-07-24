@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Book</h2>
+<p>
+  <a [routerLink] ="['/create']">Create</a>
+</p>
+
+<table>
+  <tr>
+    <th>STT</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Description</th>
+    <th>Setting</th>
+  </tr>
+  <tr *ngFor = "let book of books ; index as i" >
+    <td>{{i+1}}</td>
+    <td>
+      <a [routerLink] ="['/detail', book.id]">{{book.title}}</a>
+    </td>
+    <td>{{book.author}}</td>
+    <td>{{book.description}}</td>
+    <td>
+      <button (click)="deleteBook(book.id)">Delete</button>
+      <a [routerLink] ="['/update', book.id]">Edit</a>
+    </td>
+  </tr>
+
+</table>
+
+
+</body>
+</html>

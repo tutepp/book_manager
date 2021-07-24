@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+  
+<h1><a [routerLink] ="['/books']">Homepage</a></h1>
+<h1>The input element</h1>
+
+
+<form  *ngIf ="createForm" [formGroup] = "createForm" (ngSubmit) = "submit()">
+
+  <label for="fname">Title</label>
+  <input type="text"  formControlName="title"><br><br>
+
+  <label for="lname">Author</label>
+  <input type="text"  formControlName="author"><br><br>
+
+  <label for="lname">Description</label>
+  <input type="text"  formControlName="description"><br><br>
+
+
+  <button type="submit" >Submit</button>
+</form>
+
+
+</body>
+</html>

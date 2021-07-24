@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The input element</h1>
+
+<form  *ngIf ="updateForm" [formGroup] = "updateForm" (ngSubmit) = "submit()">
+
+  <label for="fname">Title</label>
+  <input type="text" id="fname" name="fname" formControlName="title"><br><br>
+
+  <label for="lname">Author</label>
+  <input type="text" id="lname" name="lname" formControlName="author"><br><br>
+
+  <label for="lname">Description</label>
+  <input type="text" id="lname" name="lname" formControlName="description"><br><br>
+
+
+  <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>

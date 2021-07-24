@@ -1,0 +1,48 @@
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+</head>
+<body>
+<h1><a [routerLink] ="['/books']">Homepage</a></h1>
+<h2>Book</h2>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Description</th>
+    <th>Setting</th>
+  </tr>
+  <tr>
+
+    <td>{{books.title}}</td>
+    <td>{{books.author}}</td>
+    <td>{{books.description}}</td>
+    <td>
+      <button>Delete</button>
+      <button>Edit</button>
+    </td>
+  </tr>
+
+</table>
+
+
+</body>
+</html>
